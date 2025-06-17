@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yako - Digital Marketing & IT Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and effects */
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(184, 43, 30, 0.1) 0%, rgba(255, 58, 0, 0.1) 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.02);
+        }
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 md:px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <img src="https://digitalmarketing.yakocloud.com/wp-content/uploads/2021/08/cropped-yakologo.jpeg" alt="Yako Logo" class="h-10 md:h-12">
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-800 hover:text-[#B82B1E] font-medium transition">Home</a>
+                    <a href="#services" class="text-gray-800 hover:text-[#B82B1E] font-medium transition">Services</a>
+                    <a href="#about" class="text-gray-800 hover:text-[#B82B1E] font-medium transition">About</a>
+                    <a href="#portfolio" class="text-gray-800 hover:text-[#B82B1E] font-medium transition">Portfolio</a>
+                    <a href="#contact" class="text-gray-800 hover:text-[#B82B1E] font-medium transition">Contact</a>
+                    <a href="#contact" class="bg-[#B82B1E] hover:bg-[#FF3A00] text-white px-6 py-2 rounded-lg font-medium transition">Get a Quote</a>
+                </div>
+                
+                <button class="md:hidden text-gray-800 focus:outline-none" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden bg-white py-4 px-4 rounded-lg shadow-lg mt-2" id="mobile-menu">
+                <a href="#home" class="block py-2 text-gray-800 hover:text-[#B82B1E]">Home</a>
+                <a href="#services" class="block py-2 text-gray-800 hover:text-[#B82B1E]">Services</a>
+                <a href="#about" class="block py-2 text-gray-800 hover:text-[#B82B1E]">About</a>
+                <a href="#portfolio" class="block py-2 text-gray-800 hover:text-[#B82B1E]">Portfolio</a>
+                <a href="#contact" class="block py-2 text-gray-800 hover:text-[#B82B1E]">Contact</a>
+                <a href="#contact" class="block mt-2 bg-[#B82B1E] hover:bg-[#FF3A00] text-white px-4 py-2 rounded-lg text-center">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 hero-gradient">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                    <span class="bg-[#B82B1E] text-white px-4 py-1 rounded-full text-sm font-medium mb-4 inline-block">Leading Digital Solutions in Africa</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        Impactful Digital Experiences <span class="text-[#B82B1E]">That Drive Results</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg">
+                        Yako is the ultimate one-stop shop offering digital marketing solutions in Africa, driving results through world-class integrated strategies.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="bg-[#B82B1E] hover:bg-[#FF3A00] text-white px-8 py-3 rounded-lg font-medium text-center transition transform hover:scale-105">
+                            Get Started
+                        </a>
+                        <a href="#services" class="border border-gray-300 hover:border-[#B82B1E] text-gray-700 hover:text-[#B82B1E] px-8 py-3 rounded-lg font-medium text-center transition">
+                            Our Services
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 slide-up">
+                    <img src="https://digitalmarketing.yakocloud.com/wp-content/uploads/2021/09/yakocloud-image1-1024x1024.jpeg" alt="Digital Marketing" class="rounded-xl shadow-xl w-full max-w-lg mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-[#B82B1E] mb-2">500+</div>
+                    <div class="text-gray-600">Clients</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-[#B82B1E] mb-2">50+</div>
+                    <div class="text-gray-600">Associates Worldwide</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-[#B82B1E] mb-2">98%</div>
+                    <div class="text-gray-600">Positive Feedback</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-[#B82B1E] mb-2">1000+</div>
+                    <div class="text-gray-600">Assignments</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Expertise & Services</h2>
+                <div class="w-20 h-1 bg-[#B82B1E] mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    We empower businesses to establish and grow their online presence through world-class strategies and cutting-edge technology.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-ad text-[#B82B1E] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Social Media Advertising</h3>
+                        <p class="text-gray-600 mb-4">
+                            Social Media has changed how brands communicate with their audiences forever. Whether your business is B2B or B2C, we create campaigns that drive engagement and conversions.
+                        </p>
+                        <a href="#" class="text-[#B82B1E] font-medium flex items-center">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-code text-[#B82B1E] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Web Design & Development</h3>
+                        <p class="text-gray-600 mb-4">
+                            Our team of expert web designers and developers create responsive, high-performance websites that represent your brand and convert visitors into customers.
+                        </p>
+                        <a href="#" class="text-[#B82B1E] font-medium flex items-center">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-store text-[#B82B1E] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Ecommerce Solutions</h3>
+                        <p class="text-gray-600 mb-4">
+                            A business online presence has never been more in demand. We help offline businesses establish their online stores within weeks with secure payment solutions.
+                        </p>
+                        <a href="#" class="text-[#B82B1E] font-medium flex items-center">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-search text-[#B82B1E] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Search Engine Optimization</h3>
+                        <p class="text-gray-600 mb-4">
+                            Our SEO professionals have the knowledge to optimize your content and technical setup to improve your search rankings and drive organic traffic.
+                        </p>
+                        <a href="#" class="text-[#B82B1E] font-medium flex items-center">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-pen-fancy text-[#B82B1E] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Content Marketing</h3>
+                        <p class="text-gray-600 mb-4">
+                            Content serves as the intermediary between your business and customers. We create compelling content that represents your brand effectively.
+                        </p>
+                        <a href="#" class="text-[#B82B1E] font-medium flex items-center">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-mobile-alt text-[#B82B1E] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Mobile Applications</h3>
+                        <p class="text-gray-600 mb-4">
+                            With 90% of consumers accessing the internet via mobile, we develop mobile-first strategies and apps that engage your audience effectively.
+                        </p>
+                        <a href="#" class="text-[#B82B1E] font-medium flex items-center">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Core Values</h2>
+                <div class="w-20 h-1 bg-[#B82B1E] mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    These principles guide everything we do at Yako to deliver exceptional results for our clients.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
+                    <div class="w-20 h-20 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-award text-[#B82B1E] text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Professionalism</h3>
+                    <p class="text-gray-600">
+                        We maintain the highest standards in all our engagements, ensuring quality and consistency in every project.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
+                    <div class="w-20 h-20 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-handshake text-[#B82B1E] text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Accountability</h3>
+                    <p class="text-gray-600">
+                        We take ownership of our commitments and deliver on our promises with transparency and integrity.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
+                    <div class="w-20 h-20 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-[#B82B1E] text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Reliability</h3>
+                    <p class="text-gray-600">
+                        Our clients trust us to be there when they need us, delivering consistent results they can depend on.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://digitalmarketing.yakocloud.com/wp-content/uploads/2021/04/g2-768x518.jpg" alt="About Yako" class="rounded-xl shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Welcome to the Winning Team!</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Yako is the ultimate one-stop shop offering digital marketing solutions in Africa, driving results through world-class integrated strategies.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Our end goal is to help as many organizations as possible succeed in their missions, through the provision of world-class information technology and marketing services, delightfully delivered to help them establish a lucrative online presence.
+                    </p>
+                    <a href="#contact" class="bg-[#B82B1E] hover:bg-[#FF3A00] text-white px-8 py-3 rounded-lg font-medium inline-block transition">
+                        Learn More About Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-[#B82B1E] text-white">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">IMPRESSED? WE'D LOVE TO WORK WITH YOU!</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                Updating your existing website or looking for a clean start? Considering e-commerce to grow your business? Need graphic designs and templates for branding? We can help in all cases.
+            </p>
+            <a href="#contact" class="bg-white hover:bg-gray-100 text-[#B82B1E] px-8 py-3 rounded-lg font-medium inline-block transition transform hover:scale-105">
+                GET IN TOUCH WITH OUR TEAM
+            </a>
+        </div>
+    </section>
+
+    <!-- Hosting Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Web Hosting Packages</h2>
+                <div class="w-20 h-1 bg-[#B82B1E] mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Our web hosting packages provide a top-notch experience with huge resources to power your online presence.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Silver Hosting -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden text-center">
+                    <div class="bg-gray-100 py-6">
+                        <h3 class="text-xl font-bold">Silver Hosting</h3>
+                        <!-- <div class="text-4xl font-bold text-[#B82B1E] my-4"><span class="text-lg font-normal">/mo</span></div> -->
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-8">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> 10GB SSD Storage</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> 100GB Bandwidth</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> 5 Email Accounts</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Free SSL Certificate</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> 24/7 Support</li>
+                        </ul>
+                        <a href="#contact" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-lg font-medium inline-block transition">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Gold Hosting -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden text-center transform scale-105 relative">
+                    <div class="absolute top-0 right-0 bg-[#FF3A00] text-white px-3 py-1 text-sm font-medium rounded-bl-lg">
+                        Popular
+                    </div>
+                    <div class="bg-[#B82B1E] py-6">
+                        <h3 class="text-xl font-bold text-white">Gold Hosting</h3>
+                        <!-- <div class="text-4xl font-bold text-white my-4">$19.99<span class="text-lg font-normal">/mo</span></div> -->
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-8">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> 50GB SSD Storage</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Unlimited Bandwidth</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> 20 Email Accounts</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Free SSL Certificate</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Free Domain (1 year)</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> 24/7 Priority Support</li>
+                        </ul>
+                        <a href="#contact" class="bg-[#B82B1E] hover:bg-[#FF3A00] text-white px-6 py-2 rounded-lg font-medium inline-block transition">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Platinum Hosting -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden text-center">
+                    <div class="bg-gray-100 py-6">
+                        <h3 class="text-xl font-bold">Platinum Hosting</h3>
+                        <!-- <div class="text-4xl font-bold text-[#B82B1E] my-4">$29.99<span class="text-lg font-normal">/mo</span></div> -->
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-8">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> 100GB SSD Storage</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Unlimited Bandwidth</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Unlimited Email Accounts</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Free SSL Certificate</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Free Domain (1 year)</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Dedicated Resources</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> 24/7 VIP Support</li>
+                        </ul>
+                        <a href="#contact" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-lg font-medium inline-block transition">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Solutions That Boost Your Business Growth</h2>
+                <div class="w-20 h-1 bg-[#B82B1E] mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Yako offers your business a chance to grow by providing the right solutions in the new digital environments.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-code text-[#B82B1E] text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold">Web Development</h3>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-store text-[#B82B1E] text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold">Ecommerce Solutions</h3>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-ad text-[#B82B1E] text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold">Social Media Marketing</h3>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-search text-[#B82B1E] text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold">Search Engine Optimization</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work With Us Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Want to Work With Us?</h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    What can we help you with today? Our team of experts is ready to discuss your project and provide the best digital solutions for your business.
+                </p>
+                <a href="#contact" class="bg-[#B82B1E] hover:bg-[#FF3A00] text-white px-8 py-3 rounded-lg font-medium inline-block transition transform hover:scale-105">
+                    Submit Your Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Latest Insights</h2>
+                <div class="w-20 h-1 bg-[#B82B1E] mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Our team prepares topics that matter and impact your business positively.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="https://digitalmarketing.yakocloud.com/wp-content/uploads/2021/08/domain.jpg" alt="Blog Post" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>16 Aug</span>
+                            <span class="mx-2">•</span>
+                            <span>Admin</span>
+                            <span class="mx-2">•</span>
+                            <span>Uncategorized</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">How to Choose a Perfect Domain for Your E-Commerce Business</h3>
+                        <p class="text-gray-600 mb-4">
+                            Choosing the domain is one of the first steps we take when starting an online business. Here's how to make the right choice.
+                        </p>
+                        <a href="#" class="text-[#B82B1E] font-medium">Read More →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="https://digitalmarketing.yakocloud.com/wp-content/uploads/2021/08/choose_hard_drive.png" alt="Blog Post" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>16 Aug</span>
+                            <span class="mx-2">•</span>
+                            <span>Admin</span>
+                            <span class="mx-2">•</span>
+                            <span>Uncategorized</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">How to Purchase Domain Name and Hosting Package at YakoCloud</h3>
+                        <p class="text-gray-600 mb-4">
+                            Do you want to start a blog or a new website? Here's a step-by-step guide to getting your domain and hosting with us.
+                        </p>
+                        <a href="#" class="text-[#B82B1E] font-medium">Read More →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img src="https://digitalmarketing.yakocloud.com/wp-content/uploads/2021/08/Web-Developer-in-2021-850x480.jpg" alt="Blog Post" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>16 Aug</span>
+                            <span class="mx-2">•</span>
+                            <span>Admin</span>
+                            <span class="mx-2">•</span>
+                            <span>Uncategorized</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Web Development Trends to Adopt in 2023</h3>
+                        <p class="text-gray-600 mb-4">
+                            Figuring out what the next big trend is tells us what we should focus on. Here are the hottest web tech trends to consider.
+                        </p>
+                        <a href="#" class="text-[#B82B1E] font-medium">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Clients</h2>
+                <div class="w-20 h-1 bg-[#B82B1E] mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    We've had the privilege of working with some amazing brands across Africa.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
+                <div class="p-4 flex justify-center">
+                    <img src="https://digitalmarketing.yakocloud.com/wp-content/uploads/2021/09/fempower2021sherunstheworld-1-1.jpg" alt="Client Logo" class="h-16 object-contain grayscale hover:grayscale-0 transition">
+                </div>
+                <div class="p-4 flex justify-center">
+                    <img src="https://digitalmarketing.yakocloud.com/wp-content/uploads/2021/08/SHEBnks-logo-2021-new.jpg" alt="Client Logo" class="h-16 object-contain grayscale hover:grayscale-0 transition">
+                </div>
+                <div class="p-4 flex justify-center">
+                    <img src="https://digitalmarketing.yakocloud.com/wp-content/uploads/2021/09/miss.africa-new.jpg" alt="Client Logo" class="h-16 object-contain grayscale hover:grayscale-0 transition">
+                </div>
+                <div class="p-4 flex justify-center">
+                    <img src="https://digitalmarketing.yakocloud.com/wp-content/uploads/2021/08/itbussinessdirect.jpg" alt="Client Logo" class="h-16 object-contain grayscale hover:grayscale-0 transition">
+                </div>
+                <div class="p-4 flex justify-center">
+                    <img src="https://digitalmarketing.yakocloud.com/wp-content/uploads/2021/08/cbsgroup.jpeg" alt="Client Logo" class="h-16 object-contain grayscale hover:grayscale-0 transition">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/3 mb-10 md:mb-0">
+                    <h2 class="text-2xl font-bold mb-6">About Us</h2>
+                    <p class="text-gray-600">
+                        Our end goal is to help as many organizations as possible succeed in their missions, through the provision of world-class information technology and marketing services.
+                    </p>
+                </div>
+                
+                <div class="md:w-1/3 mb-10 md:mb-0 md:px-8">
+                    <h2 class="text-2xl font-bold mb-6">Quick Links</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-600 hover:text-[#B82B1E]">About</a></li>
+                        <li><a href="#services" class="text-gray-600 hover:text-[#B82B1E]">Services</a></li>
+                        <li><a href="#contact" class="text-gray-600 hover:text-[#B82B1E]">Contact</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-[#B82B1E]">Prices</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-[#B82B1E]">Privacy policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md:w-1/3">
+                    <h2 class="text-2xl font-bold mb-6">Featured Services</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-[#B82B1E]">Web Hosting</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-[#B82B1E]">Mobile App Development</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-[#B82B1E]">Social Media Advertising</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-[#B82B1E]">SEO Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-12 bg-[#B82B1E] text-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold mb-2">Subscribe to Our Newsletter</h2>
+                    <p>We're on a mission to build a better future where technology creates opportunities.</p>
+                </div>
+                <div class="flex w-full md:w-auto">
+                    <input type="email" placeholder="Your email address" class="px-4 py-3 rounded-l-lg w-full md:w-64 focus:outline-none text-gray-800">
+                    <button class="bg-[#FF3A00] hover:bg-orange-700 px-6 py-3 rounded-r-lg font-medium">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-[#B82B1E] mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Have a project in mind or want to learn more about our services? Contact us today and our team will get back to you promptly.
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-[#B82B1E]"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Our Location</h4>
+                                    <p class="text-gray-600">123 Digital Street, Tech City, Africa</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone-alt text-[#B82B1E]"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Call Us</h4>
+                                    <p class="text-gray-600">+123 456 7890</p>
+                                    <p class="text-gray-600">+123 456 7891</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-[#B82B1E]/10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-[#B82B1E]"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Email Us</h4>
+                                    <p class="text-gray-600">info@yakocloud.com</p>
+                                    <p class="text-gray-600">support@yakocloud.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B82B1E]">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 mb-2">Your Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B82B1E]">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B82B1E]">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B82B1E]"></textarea>
+                            </div>
+                            <button type="submit" class="bg-[#B82B1E] hover:bg-[#FF3A00] text-white px-8 py-3 rounded-lg font-medium w-full transition">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <a href="#" class="flex items-center mb-6">
+                        <img src="https://digitalmarketing.yakocloud.com/wp-content/uploads/2021/08/cropped-yakologo.jpeg" alt="Yako Logo" class="h-10">
+                    </a>
+                    <p class="text-gray-400 max-w-xs">
+                        Empowering businesses in Africa with world-class digital marketing and IT solutions.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Company</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Portfolio</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Support</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Connect</h3>
+                        <div class="flex space-x-4 mb-4">
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#B82B1E] transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#B82B1E] transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#B82B1E] transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#B82B1E] transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                        <p class="text-gray-400">info@yakocloud.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">© 2023 Yako. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent -->
+    <div class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 flex flex-col md:flex-row items-center justify-between z-50">
+        <p class="mb-4 md:mb-0 md:mr-4">
+            We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it.
+        </p>
+        <button class="bg-[#B82B1E] hover:bg-[#FF3A00] text-white px-6 py-2 rounded-lg font-medium transition">
+            I Understand
+        </button>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in, .slide-up');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Initialize animations
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>
